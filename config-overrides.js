@@ -10,6 +10,7 @@ module.exports = function override(config) {
     https: require.resolve("https-browserify"),
     os: require.resolve("os-browserify"),
     url: require.resolve("url"),
+    zlib: require.resolve("browserify-zlib"),
   });
   config.ignoreWarnings = [/Failed to parse source map/];
   config.resolve.fallback = fallback;
