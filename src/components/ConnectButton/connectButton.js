@@ -1,14 +1,19 @@
-import { Button, Blockie } from "web3uikit";
 import { useState, useEffect } from "react";
-
+import { MDBBtn } from "mdb-react-ui-kit";
+import Modal from "./../accountModal/accountModal";
 import "./connectButton.styles.scss";
 const ConnectButton = () => {
   const [account, setAccount] = useState();
+  const [modalStatus, setModalStatus] = useState(false);
   useEffect(() => {
     let acc = sessionStorage.getItem("account");
     if (acc) {
       setAccount(acc);
     }
+    window.ethereum.on("accountsChanged", (accounts) => {
+      setAccount(accounts[0]);
+      sessionStorage.setItem("account", accounts[0]);
+    });
   }, []);
 
   const connect = async () => {
@@ -22,25 +27,24 @@ const ConnectButton = () => {
 
   if (account) {
     return (
-      <div className="account">
-        <Blockie seed={account} />
-        <Button disabled text={account} />
-        <Button
-          text="Disconnect"
-          onClick={() => {
-            setAccount(null);
-          }}
-        />
+      <div
+        className="account "
+        onClick={() => {
+          setModalStatus(!modalStatus);
+        }}
+      >
+        <Modal modalStatus={modalStatus} />
+        <MDBBtn className="btn" id="btn">
+          {account.slice(0, 4)}...{account.slice(38)}
+        </MDBBtn>
       </div>
     );
   } else {
     return (
       <div>
-        <Button
-          className="connectButton"
-          text="Connect Button"
-          onClick={connect}
-        />
+        <MDBBtn className="connectButton" id="btn" onClick={connect}>
+          Connect
+        </MDBBtn>
       </div>
     );
   }

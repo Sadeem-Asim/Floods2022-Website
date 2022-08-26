@@ -1,0 +1,32 @@
+#video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.heroSection {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #308a006c, #00291b48);
+}
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  .logo {
+    width: 350px;
+  }
+  .bannerText {
+    width: 800px;
+    font-size: 30px;
+    color: yellow;
+  }
+}

@@ -1,10 +1,9 @@
 import "./App.css";
-import ConnectButton from "./components/ConnectButton/connectButton";
-
+import Home from "./pages/Home/home";
 function App() {
   return (
-    <div className="App">
-      <Home/>
+    <div className="app">
+      <Home />
     </div>
   );
 }

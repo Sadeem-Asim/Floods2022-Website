@@ -1,0 +1,31 @@
+.header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 15px;
+  .header-container {
+    display: flex;
+  }
+  .logo {
+    padding: 8px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 45px;
+
+    .menu-item {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.link {
+  color: white;
+  font-size: 20px;
+}
