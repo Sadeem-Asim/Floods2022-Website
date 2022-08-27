@@ -65,6 +65,11 @@ const Home = () => {
           </MDBRow>
         </MDBContainer>
       </section>
+      <section className="zooSection">
+        <MDBTypography variant="h1" className="title heading-secondary">
+          lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
+        </MDBTypography>
+      </section>
     </div>
   );
 };

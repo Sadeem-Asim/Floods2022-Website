@@ -50,16 +50,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #163e02 1%, white 90%);
-
+  background: linear-gradient(
+    to bottom,
+    #163e02 1%,
+    rgba(255, 255, 255, 0.685) 90%
+  );
   .title {
     text-transform: uppercase;
     text-align: center;
     color: white;
     margin-bottom: 10rem;
   }
-
   .right-side {
     padding: 0 5rem;
   }
+}
+
+.zooSection {
+  position: relative;
+  max-height: 100vh;
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top,
+    #163e02 1%,
+    rgba(255, 255, 255, 0.692) 90%
+  );
 }

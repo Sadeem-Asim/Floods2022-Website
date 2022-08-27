@@ -33,14 +33,9 @@
   line-height: 3rem;
   letter-spacing: 2px;
   display: block;
-  // background-image: linear-gradient(
-  //   to right,
-  //   $color-primary-light,
-  //   $color-primary-dark
-  // );
-  background: linear-gradient(to right, #3eb802, #184700);
+  background-image: linear-gradient(to right, #3eb802, #184700);
+  backface-visibility: hidden;
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
