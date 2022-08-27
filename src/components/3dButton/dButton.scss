@@ -1,85 +1,134 @@
 .dButton {
   width: 20rem;
   height: 6rem;
+  font-size: 2rem;
   position: relative;
   text-align: center;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transform-origin: center center;
-  & span {
+  letter-spacing: 0.2rem;
+  padding: 1.5rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+  color: white;
+  overflow: hidden;
+  &:hover {
+    color: white;
+  }
+  & span:nth-child(1) {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, black 60%, yellow);
+    animation: animate1 2s linear infinite;
+    -webkit-animation: animate1 2s linear infinite;
+  }
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+    }
+  }
+  & span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
     height: 100%;
-    display: block;
-    text-align: center;
-    line-height: 6rem;
-    font-size: 2.4rem;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    border-radius: 3rem;
-    text-transform: uppercase;
-    color: #fff;
-    transition: 1s;
-    &.front {
-      color: black;
-      transform: rotateX(0deg) translateZ(2rem);
-      -webkit-transform: rotateX(0deg) translateZ(2rem);
-      -moz-transform: rotateX(0deg) translateZ(2rem);
-      -ms-transform: rotateX(0deg) translateZ(2rem);
-      -o-transform: rotateX(0deg) translateZ(2rem);
-    }
-    &.back {
-      transform: rotateX(-180deg) translateZ(2rem);
-      -webkit-transform: rotateX(-180deg) translateZ(2rem);
-      -moz-transform: rotateX(-180deg) translateZ(2rem);
-      -ms-transform: rotateX(-180deg) translateZ(2rem);
-      -o-transform: rotateX(-180deg) translateZ(2rem);
-    }
-    &.center {
-      background: #ffd200;
-    }
-    &.center::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, black, darkgreen);
-      border-radius: 3rem;
-      transform: translateZ(-1px);
-      -webkit-transform: translateZ(-1px);
-      -moz-transform: translateZ(-1px);
-      -ms-transform: translateZ(-1px);
-      -o-transform: translateZ(-1px);
-      -webkit-border-radius: 3rem;
-      -moz-border-radius: 3rem;
-      -ms-border-radius: 3rem;
-      -o-border-radius: 3rem;
-    }
+    background: linear-gradient(to top, black 60%, yellow);
+    animation: animate3 2s linear infinite;
+    -webkit-animation: animate3 2s linear infinite;
   }
-  &:hover .front {
-    transform: rotateX(-180deg) translateZ(2rem);
-    -webkit-transform: rotateX(-180deg) translateZ(2rem);
-    -moz-transform: rotateX(-180deg) translateZ(2rem);
-    -ms-transform: rotateX(-180deg) translateZ(2rem);
-    -o-transform: rotateX(-180deg) translateZ(2rem);
-  }
-}
 
-.dButton:hover .center {
-  transform: rotateX(-180deg);
-  -webkit-transform: rotateX(-180deg);
-  -moz-transform: rotateX(-180deg);
-  -ms-transform: rotateX(-180deg);
-  -o-transform: rotateX(-180deg);
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -o-transform: translateY(100%);
+    }
+  }
+  & span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, black 60%, yellow);
+    animation: animate2 2s linear infinite;
+    -webkit-animation: animate2 2s linear infinite;
+  }
+
+  @keyframes animate3 {
+    0% {
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -o-transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+    }
+  }
+  & span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, black 60%, yellow);
+
+    animation: animate4 2s linear infinite;
+    -webkit-animation: animate4 2s linear infinite;
+  }
+
+  @keyframes animate4 {
+    0% {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+    }
+  }
 }
-.dButton:hover .back {
-  transform: rotateX(0deg) translateZ(2rem);
-  -webkit-transform: rotateX(0deg) translateZ(2rem);
-  -moz-transform: rotateX(0deg) translateZ(2rem);
-  -ms-transform: rotateX(0deg) translateZ(2rem);
-  -o-transform: rotateX(0deg) translateZ(2rem);
-}
+// .dButton::before {
+//   content: "";
+//   position: absolute;
+//   top: 0.2rem;
+//   bottom: 0.2rem;
+//   left: 0.2rem;
+//   width: 50%;
+//   background: rgba(255, 255, 255, 0.05);
+// }

@@ -7,14 +7,15 @@ const Home = () => {
     <div className="home">
       <section className="heroSection">
         <Header />
-        <img
-          src="/Images/background-1.png"
-          alt="img"
+        {/* <img src="/Images/background-1.png" alt="img" /> */}
+        <video
+          src="/Videos/1.mp4"
           className="homeBackground"
           autoPlay
           muted
           loop
         />
+
         <MDBContainer>
           <div className="banner">
             <img src="/Images/logo.png" alt="logo" className="logo" />
