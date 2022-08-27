@@ -46,10 +46,20 @@
 .showcaseSection {
   position: relative;
   min-height: 100vh;
-  padding: 100px 0;
-
+  padding: 10rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: linear-gradient(to bottom, #163e02 1%, white 90%);
+
+  .title {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin-bottom: 10rem;
+  }
+
+  .right-side {
+    padding: 0 5rem;
+  }
 }
