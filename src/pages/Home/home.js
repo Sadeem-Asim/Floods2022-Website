@@ -18,7 +18,7 @@ const Home = () => {
 
         <MDBContainer>
           <div className="banner">
-            <img src="/Images/logo.png" alt="logo" className="logo" />
+            {/* <img src="/Images/logo.png" alt="logo" className="logo" /> */}
             <span className="bannerText">
               <span className="bannerText-1">
                 Mint - Stake Nfts & Enjoy Lifetime Reward{" "}

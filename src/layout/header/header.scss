@@ -12,9 +12,9 @@
 
   .header-container {
     display: flex;
-  }
-  .logo {
-    padding: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .menu {
@@ -24,7 +24,7 @@
     column-gap: 4.5rem;
 
     .menu-item {
-      padding-bottom: 1rem;
+      padding: 2.5rem 0;
     }
   }
 }
@@ -32,6 +32,9 @@
 .link {
   color: white;
   font-size: 2rem;
+  &:hover {
+    color: white;
+  }
 }
 .header-fixed {
   position: fixed;
