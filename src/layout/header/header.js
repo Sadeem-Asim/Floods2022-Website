@@ -1,12 +1,25 @@
+import { useEffect, useState } from "react";
 import "./header.scss";
 import ConnectButton from "./../../components/ConnectButton/connectButton";
 import Logo from "../../components/Logo/logo";
 import { Link } from "react-router-dom";
 import { MDBContainer } from "mdb-react-ui-kit";
+
 const Header = () => {
+  const [headerAbsolute, setHeaderFixed] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", listenScroll);
+  });
+  const listenScroll = () => {
+    if (window.scrollY > 40) {
+      setHeaderFixed(true);
+    } else if (window.scrollY < 40) {
+      setHeaderFixed(false);
+    }
+  };
   return (
     <>
-      <div className="header">
+      <div className={`header ${headerAbsolute ? "header-fixed" : ""}`}>
         <MDBContainer className="header-container d-flex">
           <div className="p-2  logo">
             <Logo />

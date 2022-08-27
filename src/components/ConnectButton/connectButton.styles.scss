@@ -1,10 +1,48 @@
 .account {
-  display: flex;
+  text-align: center;
 }
 
 #btn {
-  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
   background-color: #ffd200;
   color: #003f2a;
   font-weight: 700;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+#popoverButtonsCopy {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #003f2a;
+  color: #ffd200;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+#popoverButtonsDisconnect {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #003f2a;
+  background-color: #ffd200;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+#chainInfo {
+  font-size: 1.5rem;
+}
+#address {
+  font-size: 1.2rem;
 }

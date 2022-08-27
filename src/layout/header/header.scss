@@ -1,31 +1,40 @@
 .header {
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   margin: 0 auto;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 1.5rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: 0.6s;
+
   .header-container {
     display: flex;
   }
   .logo {
-    padding: 8px;
+    padding: 0.8rem;
   }
 
   .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 45px;
+    column-gap: 4.5rem;
 
     .menu-item {
-      padding-bottom: 10px;
+      padding-bottom: 1rem;
     }
   }
 }
 
 .link {
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
+}
+.header-fixed {
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.747);
 }

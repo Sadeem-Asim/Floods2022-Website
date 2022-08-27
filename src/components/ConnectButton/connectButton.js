@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { MDBBtn } from "mdb-react-ui-kit";
-import Modal from "./../accountModal/accountModal";
+import { MDBPopover, MDBPopoverBody, MDBPopoverHeader } from "mdb-react-ui-kit";
+
 import "./connectButton.styles.scss";
+// import AccountPopper from "./../accountPopper/popper";
 const ConnectButton = () => {
   const [account, setAccount] = useState();
-  const [modalStatus, setModalStatus] = useState(false);
+  const [copyText, setCopy] = useState("Copy");
+
   useEffect(() => {
     let acc = sessionStorage.getItem("account");
     if (acc) {
@@ -15,6 +18,17 @@ const ConnectButton = () => {
       sessionStorage.setItem("account", accounts[0]);
     });
   }, []);
+  const copy = () => {
+    navigator.clipboard.writeText(account);
+    setCopy("Copied");
+    setTimeout(() => {
+      setCopy("Copy");
+    }, 2000);
+  };
+  const disconnect = () => {
+    setAccount(null);
+    sessionStorage.removeItem("account");
+  };
 
   const connect = async () => {
     window.ethereum
@@ -27,16 +41,24 @@ const ConnectButton = () => {
 
   if (account) {
     return (
-      <div
-        className="account "
-        onClick={() => {
-          setModalStatus(!modalStatus);
-        }}
-      >
-        <Modal modalStatus={modalStatus} />
-        <MDBBtn className="btn" id="btn">
-          {account.slice(0, 4)}...{account.slice(38)}
-        </MDBBtn>
+      <div className="account">
+        <MDBPopover
+          className="btn"
+          id="btn"
+          size="lg"
+          btnChildren={`${account.slice(0, 4)}...${account.slice(38)}`}
+        >
+          <MDBPopoverHeader id="chainInfo">
+            Account (Binance Smart Chain)
+          </MDBPopoverHeader>
+          <MDBPopoverBody id="address">{account}</MDBPopoverBody>
+          <MDBBtn id="popoverButtonsCopy" onClick={copy}>
+            {copyText}
+          </MDBBtn>
+          <MDBBtn id="popoverButtonsDisconnect" onClick={disconnect}>
+            Disconnect
+          </MDBBtn>
+        </MDBPopover>
       </div>
     );
   } else {
