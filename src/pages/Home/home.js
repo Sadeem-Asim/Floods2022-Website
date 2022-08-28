@@ -1,39 +1,19 @@
 import "./home.scss";
-import Header from "../../layout/header/header";
-import DButton from "./../../components/3dButton/3dButton.jsx";
 import CompositionImages from "../../components/compositionImages/compositionImages";
 import { MDBContainer, MDBTypography, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import HeroSection from "./../../layout/heroSection/heroSection";
+import Slider from "../../components/slider/slider";
 import "./home.scss";
 
 const Home = () => {
+  const imgs = [
+    "https://cdn.vectorstock.com/i/1000x1000/46/65/animals-of-zoo-in-cartoon-style-vector-20704665.webp",
+    "https://c8.alamy.com/comp/2J96XPC/zoo-cartoon-illustration-with-safari-animals-elephant-giraffe-lion-monkey-panda-zebra-and-visitors-on-territory-on-forest-background-2J96XPC.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVddAyA97JMRktsHd4mYBulU9AsvIJWbwsLA&usqp=CAU",
+  ];
   return (
     <div className="home">
-      <section className="heroSection">
-        <Header />
-        {/* <img src="/Images/background-1.png" alt="img" /> */}
-        <video
-          src="/Videos/1.mp4"
-          className="homeBackground"
-          autoPlay
-          muted
-          loop
-        />
-        <MDBContainer>
-          <div className="banner">
-            <img src="/Images/logo.png" alt="logo" className="logo" />
-            <span className="bannerText">
-              <span className="bannerText-1">
-                Mint - Stake Nfts & Enjoy Lifetime Reward
-              </span>
-              <br />
-              <span className="bannerText-2">
-                Contribute To The Environment
-              </span>
-            </span>
-            <DButton text1="Mint" text2="Nfts" />
-          </div>
-        </MDBContainer>
-      </section>
+      <HeroSection />
       <section className="showcaseSection">
         <MDBContainer>
           <MDBTypography variant="h1" className="title heading-secondary">
@@ -69,6 +49,11 @@ const Home = () => {
         <MDBTypography variant="h1" className="title heading-secondary">
           lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
         </MDBTypography>
+        <Slider imgs={imgs} />
+        <MDBTypography variant="h1" className="title heading-secondary">
+          lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
+        </MDBTypography>
+        <Slider imgs={imgs} />
       </section>
     </div>
   );
