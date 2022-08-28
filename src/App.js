@@ -19,7 +19,7 @@ function App() {
       }
     };
     switchNetwork();
-  }, [account, chainId]);
+  }, [account, chainId, isAuthenticated]);
   return (
     <div className="App">
       <ConnectButton />
