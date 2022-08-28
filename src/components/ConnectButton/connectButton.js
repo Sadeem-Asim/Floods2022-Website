@@ -1,18 +1,34 @@
-import { Button, Blockie } from "web3uikit";
 import { useState, useEffect } from "react";
-import { useMoralisWeb3Api, useMoralis } from "react-moralis";
+import { MDBBtn } from "mdb-react-ui-kit";
+import { MDBPopover, MDBPopoverBody, MDBPopoverHeader } from "mdb-react-ui-kit";
 
 import "./connectButton.styles.scss";
+// import AccountPopper from "./../accountPopper/popper";
 const ConnectButton = () => {
-  const Web3Api = useMoralisWeb3Api();
-  const { chainId } = useMoralis;
   const [account, setAccount] = useState();
+  const [copyText, setCopy] = useState("Copy");
+
   useEffect(() => {
     let acc = sessionStorage.getItem("account");
     if (acc) {
       setAccount(acc);
     }
+    window.ethereum.on("accountsChanged", (accounts) => {
+      setAccount(accounts[0]);
+      sessionStorage.setItem("account", accounts[0]);
+    });
   }, []);
+  const copy = () => {
+    navigator.clipboard.writeText(account);
+    setCopy("Copied");
+    setTimeout(() => {
+      setCopy("Copy");
+    }, 2000);
+  };
+  const disconnect = () => {
+    setAccount(null);
+    sessionStorage.removeItem("account");
+  };
 
   const connect = async () => {
     window.ethereum
@@ -21,36 +37,36 @@ const ConnectButton = () => {
         setAccount(result[0]);
         sessionStorage.setItem("account", result[0]);
       });
-    const options = {
-      address: "0xa3063bd0469482bac4219290365892a4e7747aea",
-      from_block: "0",
-    };
-    const transactions = await Web3Api.account.getTransactions(options);
-    console.log(transactions);
-    console.log(chainId);
   };
 
   if (account) {
     return (
       <div className="account">
-        <Blockie seed={account} />
-        <Button disabled text={account} />
-        <Button
-          text="Disconnect"
-          onClick={() => {
-            setAccount(null);
-          }}
-        />
+        <MDBPopover
+          className="btn"
+          id="btn"
+          size="lg"
+          btnChildren={`${account.slice(0, 4)}...${account.slice(38)}`}
+        >
+          <MDBPopoverHeader id="chainInfo">
+            Account (Binance Smart Chain)
+          </MDBPopoverHeader>
+          <MDBPopoverBody id="address">{account}</MDBPopoverBody>
+          <MDBBtn id="popoverButtonsCopy" onClick={copy}>
+            {copyText}
+          </MDBBtn>
+          <MDBBtn id="popoverButtonsDisconnect" onClick={disconnect}>
+            Disconnect
+          </MDBBtn>
+        </MDBPopover>
       </div>
     );
   } else {
     return (
       <div>
-        <Button
-          className="connectButton"
-          text="Connect Button"
-          onClick={connect}
-        />
+        <MDBBtn className="connectButton" id="btn" onClick={connect}>
+          Connect
+        </MDBBtn>
       </div>
     );
   }

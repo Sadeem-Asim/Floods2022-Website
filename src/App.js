@@ -1,28 +1,11 @@
-import "./App.css";
-// import Connect from "./components/ConnectButton/connectButton";
-import { ConnectButton } from "web3uikit";
-import { useMoralis } from "react-moralis";
-import { useEffect } from "react";
-
-// import { useEffect } from "react";
+import "./App.scss";
+import Home from "./pages/Home/home";
+import Header from "./layout/header/header";
 function App() {
-  const { chainId, account, isAuthenticated } = useMoralis();
-  console.log(chainId, account, isAuthenticated);
-
-  useEffect(() => {
-    const switchNetwork = () => {
-      if (isAuthenticated) {
-        if (chainId === "0x61") {
-        } else {
-          alert("Change Your Network");
-        }
-      }
-    };
-    switchNetwork();
-  }, [account, chainId, isAuthenticated]);
   return (
-    <div className="App">
-      <ConnectButton />
+    <div className="app">
+      <Header />
+      <Home />
     </div>
   );
 }
