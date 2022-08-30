@@ -29,6 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   background: linear-gradient(
     to top,
     #163e02 1%,
@@ -37,4 +38,26 @@
   .title {
     text-align: center;
   }
+=======
+  background: rgba(255, 255, 255, 0.692);
+
+  & .title {
+    text-align: center;
+  }
+
+  &-birds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  &-birds-2 {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+>>>>>>> 23ca4c1ee84b4ad7d2cd5ae946f5ebac5e77a6bd
 }

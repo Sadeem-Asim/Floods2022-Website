@@ -3,6 +3,7 @@ import CompositionImages from "../../components/compositionImages/compositionIma
 import { MDBContainer, MDBTypography, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import HeroSection from "./../../layout/heroSection/heroSection";
 import Slider from "../../components/slider/slider";
+import Birds from "./../../components/flyingBirds/flyingBirds";
 import "./home.scss";
 
 const Home = () => {
@@ -10,7 +11,10 @@ const Home = () => {
     "https://cdn.vectorstock.com/i/1000x1000/46/65/animals-of-zoo-in-cartoon-style-vector-20704665.webp",
     "https://c8.alamy.com/comp/2J96XPC/zoo-cartoon-illustration-with-safari-animals-elephant-giraffe-lion-monkey-panda-zebra-and-visitors-on-territory-on-forest-background-2J96XPC.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVddAyA97JMRktsHd4mYBulU9AsvIJWbwsLA&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvDEYu0ysjFVKh1atBzowW91BAo24lsf20gpNhA8Jl&s",
+    "https://image.shutterstock.com/image-vector/zoo-entrance-gates-cartoon-poster-260nw-1081891775.jpg",
   ];
+
   return (
     <div className="home">
       <HeroSection />
@@ -46,15 +50,22 @@ const Home = () => {
         </MDBContainer>
       </section>
       <section className="zooSection">
+        <div className="zooSection-birds">
+          <Birds />
+        </div>
         <MDBContainer>
           <MDBTypography variant="h1" className="title heading-secondary">
             lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
           </MDBTypography>
+          <div className="zooSection-birds-2">
+            <Birds />
+          </div>
           <Slider imgs={imgs} />
           <MDBTypography variant="h1" className="title heading-secondary">
             lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
           </MDBTypography>
           {/* <Slider imgs={imgs} /> */}
+          <Slider imgs={imgs} />
         </MDBContainer>
       </section>
     </div>
