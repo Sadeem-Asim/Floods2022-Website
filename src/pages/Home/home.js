@@ -3,6 +3,7 @@ import CompositionImages from "../../components/compositionImages/compositionIma
 import { MDBContainer, MDBTypography, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import HeroSection from "./../../layout/heroSection/heroSection";
 import Slider from "../../components/slider/slider";
+import Birds from "./../../components/flyingBirds/flyingBirds";
 import "./home.scss";
 
 const Home = () => {
@@ -49,10 +50,16 @@ const Home = () => {
         </MDBContainer>
       </section>
       <section className="zooSection">
+        <div className="zooSection-birds">
+          <Birds />
+        </div>
         <MDBContainer>
           <MDBTypography variant="h1" className="title heading-secondary">
             lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
           </MDBTypography>
+          <div className="zooSection-birds-2">
+            <Birds />
+          </div>
           <Slider imgs={imgs} />
           <MDBTypography variant="h1" className="title heading-secondary">
             lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
