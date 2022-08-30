@@ -65,6 +65,16 @@ const Home = () => {
           <Slider imgs={imgs} />
         </MDBContainer>
       </section>
+      <section className="featuresSection">
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol md="3" className="card"></MDBCol>
+            <MDBCol md="3" className="card"></MDBCol>
+            <MDBCol md="3" className="card"></MDBCol>
+            <MDBCol md="3" className="card"></MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
     </div>
   );
 };
