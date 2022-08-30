@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section className="heroSection">
       <video
-        src="/Videos/1.mp4"
+        src="/Videos/2.mp4"
         className="homeBackground"
         autoPlay
         muted

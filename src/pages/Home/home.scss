@@ -29,9 +29,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to top,
-    #163e02 1%,
-    rgba(255, 255, 255, 0.692) 90%
-  );
+  background: rgba(255, 255, 255, 0.692);
+
+  & .title {
+    text-align: center;
+  }
 }
