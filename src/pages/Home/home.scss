@@ -71,26 +71,10 @@
   }
   &-birds-2 {
     position: absolute;
-    top: 30%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1000;
-  }
-  &-birds-3 {
-    position: absolute;
     top: 40%;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1000;
-  }
-  &-birds-4 {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 100vw;
-    // height: 100vh;
     z-index: -1000;
   }
 }

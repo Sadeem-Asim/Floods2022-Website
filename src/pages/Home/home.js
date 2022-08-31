@@ -150,13 +150,8 @@ const Home = () => {
           <MDBTypography variant="h1" className="title heading-secondary">
             Our Pets
           </MDBTypography>
-          <div className="zooSection-birds-3">
-            <Birds />
-          </div>
+
           <Slider imgs={imgs} />
-          <div className="zooSection-birds-4">
-            <Birds />
-          </div>
         </MDBContainer>
       </section>
       <section className="footer"></section>
