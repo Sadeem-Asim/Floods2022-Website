@@ -7,7 +7,7 @@ import Birds from "./../../components/flyingBirds/flyingBirds";
 import "./home.scss";
 
 import pet1 from "../../assets/Images/pet1.png";
-
+import video from "../../assets/Videos/1.mkv";
 const Home = () => {
   const imgs = [pet1, pet1];
 
@@ -20,7 +20,7 @@ const Home = () => {
             <MDBCol size="md" className="card">
               <img alt="img" className="card-image" src={pet1} />
               <MDBTypography variant="h3" className="card-title">
-                Spend
+                Buy
               </MDBTypography>
               <MDBTypography variant="p" className="card-description">
                 Pay Anyone Instantly
@@ -29,7 +29,7 @@ const Home = () => {
             <MDBCol size="md" className="card">
               <img alt="img" className="card-image" src={pet1} />
               <MDBTypography variant="h3" className="card-title">
-                Spend
+                Sell
               </MDBTypography>
               <MDBTypography variant="p" className="card-description">
                 Pay Anyone Instantly
@@ -38,7 +38,7 @@ const Home = () => {
             <MDBCol size="md" className="card">
               <img alt="img" className="card-image" src={pet1} />
               <MDBTypography variant="h3" className="card-title">
-                Spend
+                Get Rewards
               </MDBTypography>
               <MDBTypography variant="p" className="card-description">
                 Pay Anyone Instantly
@@ -47,7 +47,7 @@ const Home = () => {
             <MDBCol size="md" className="card">
               <img alt="img" className="card-image" src={pet1} />
               <MDBTypography variant="h3" className="card-title">
-                Spend
+                Community
               </MDBTypography>
               <MDBTypography variant="p" className="card-description">
                 Pay Anyone Instantly
@@ -87,7 +87,52 @@ const Home = () => {
           </MDBRow>
         </MDBContainer>
       </section>
+      <section className="featuresSection">
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Buy
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Sell
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Get Rewards
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Community
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
       <section className="zooSection">
+        <div>
+          <video src={video} className="zooSection-bg" autoPlay muted loop />
+        </div>
         <div className="zooSection-birds">
           <Birds />
         </div>
