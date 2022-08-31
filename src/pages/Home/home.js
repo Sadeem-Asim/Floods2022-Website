@@ -159,6 +159,7 @@ const Home = () => {
           </div>
         </MDBContainer>
       </section>
+      <section className="footer"></section>
     </div>
   );
 };
