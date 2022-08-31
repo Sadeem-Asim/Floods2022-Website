@@ -93,17 +93,22 @@ const Home = () => {
         </div>
         <MDBContainer>
           <MDBTypography variant="h1" className="title heading-secondary">
-            lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
+            Our Zoo's
           </MDBTypography>
           <div className="zooSection-birds-2">
             <Birds />
           </div>
           <Slider imgs={imgs} />
           <MDBTypography variant="h1" className="title heading-secondary">
-            lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
+            Our Pets
           </MDBTypography>
-          {/* <Slider imgs={imgs} /> */}
+          <div className="zooSection-birds-3">
+            <Birds />
+          </div>
           <Slider imgs={imgs} />
+          <div className="zooSection-birds-4">
+            <Birds />
+          </div>
         </MDBContainer>
       </section>
     </div>
