@@ -5,11 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    #163e02 1%,
-    rgba(255, 255, 255, 0.685) 90%
-  );
+  background: rgba(255, 255, 255, 0.685);
   .title {
     text-transform: uppercase;
     text-align: center;
@@ -50,20 +46,18 @@
     width: 100vw;
     height: 100vh;
     z-index: -1000;
-
   }
 }
 
-
-.featureSection{
+.featureSection {
   position: relative;
   min-height: 100vh;
 
   // background: rgba(255, 255, 255, 0.692);
-  background-color:red;
+  background-color: red;
 
-  & .card{
-    background-color:red;
-    width:100%;
+  & .card {
+    background-color: red;
+    width: 100%;
   }
 }
