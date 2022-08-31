@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./header.scss";
 import ConnectButton from "./../../components/ConnectButton/connectButton";
 import Logo from "../../components/Logo/logo";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { MDBContainer } from "mdb-react-ui-kit";
 
 const Header = () => {
@@ -21,10 +21,10 @@ const Header = () => {
     <>
       <div className={`header ${headerAbsolute ? "header-fixed" : ""}`}>
         <MDBContainer className="header-container d-flex">
-          <div className="p-2  logo">
+          <div className=" logo">
             <Logo />
           </div>
-          <div className="p-2 flex-grow-1 menu">
+          {/* <div className="p-2 flex-grow-1 menu">
             <div className="menu-item">
               <Link className="link" to="#">
                 Menu
@@ -50,8 +50,8 @@ const Header = () => {
                 Audit
               </Link>
             </div>
-          </div>
-          <div className="p-2  connectButton">
+          </div> */}
+          <div className=" connectButton">
             <ConnectButton />
           </div>
         </MDBContainer>

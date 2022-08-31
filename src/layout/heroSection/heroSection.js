@@ -1,8 +1,8 @@
 import { MDBContainer } from "mdb-react-ui-kit";
 import DButton from "./../../components/3dButton/3dButton.jsx";
 import "./heroSection.scss";
-import video from "./../../assets/Videos/1.mp4";
-import logo from "./../../assets/Images/logo.png";
+import video from "./../../assets/Videos/3.mp4";
+import logo from "./../../assets/Images/pet1nonbg.png";
 const HeroSection = () => {
   return (
     <section className="heroSection">
