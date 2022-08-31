@@ -81,7 +81,7 @@
 
 .featuresSection {
   position: relative;
-  max-height: 100vh;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +117,8 @@
 }
 .zooFeaturesSection {
   position: relative;
-  max-height: 100vh;
+  min-height: 50vh;
+
   display: flex;
   justify-content: center;
   align-items: center;

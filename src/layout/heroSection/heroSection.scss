@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 10rem 0;
   .homeBackground {
     width: 100%;
     height: 100%;
@@ -23,14 +23,14 @@
     align-items: center;
 
     .logo {
-      width: 350px;
+      width: 35rem;
     }
     .bannerText {
-      width: 800px;
+      width: 80rem;
       text-align: center;
-      font-size: 30px;
+      font-size: 3rem;
       color: white;
-      margin-bottom: 30px;
+      margin-bottom: 3rem;
       .bannerText-1 {
         font-size: inherit;
       }
