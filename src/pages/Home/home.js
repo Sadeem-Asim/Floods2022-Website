@@ -14,6 +14,48 @@ const Home = () => {
   return (
     <div className="home">
       <HeroSection />
+      <section className="featuresSection">
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Spend
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Spend
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Spend
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+            <MDBCol size="md" className="card">
+              <img alt="img" className="card-image" src={pet1} />
+              <MDBTypography variant="h3" className="card-title">
+                Spend
+              </MDBTypography>
+              <MDBTypography variant="p" className="card-description">
+                Pay Anyone Instantly
+              </MDBTypography>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
       <section className="showcaseSection">
         <MDBContainer>
           <MDBTypography variant="h1" className="title heading-secondary">
@@ -56,23 +98,12 @@ const Home = () => {
           <div className="zooSection-birds-2">
             <Birds />
           </div>
-
           <Slider imgs={imgs} />
           <MDBTypography variant="h1" className="title heading-secondary">
             lorem ipsum dolor sit amet, consect lorem ipsum dolor sit amet
           </MDBTypography>
           {/* <Slider imgs={imgs} /> */}
           <Slider imgs={imgs} />
-        </MDBContainer>
-      </section>
-      <section className="featuresSection">
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md="3" className="card"></MDBCol>
-            <MDBCol md="3" className="card"></MDBCol>
-            <MDBCol md="3" className="card"></MDBCol>
-            <MDBCol md="3" className="card"></MDBCol>
-          </MDBRow>
         </MDBContainer>
       </section>
     </div>
