@@ -87,8 +87,11 @@ const Home = () => {
           </MDBRow>
         </MDBContainer>
       </section>
-      <section className="featuresSection">
+      <section className="zooFeaturesSection">
         <MDBContainer>
+          <MDBTypography variant="h1" className="zooFeaturesSection-title">
+            Zoo Features
+          </MDBTypography>
           <MDBRow>
             <MDBCol size="md" className="card">
               <img alt="img" className="card-image" src={pet1} />
