@@ -1,0 +1,26 @@
+#donate-button {
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color-light);
+  box-shadow: 0.5rem 0.5rem 2rem black;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--primary-color-light);
+    transform: translateY(-1rem);
+    -webkit-transform: translateY(-1rem);
+    -moz-transform: translateY(-1rem);
+    -ms-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
+  }
+}

@@ -5,19 +5,21 @@ body {
 html {
   --scrollbarBG: black;
   --thumbBG: #00d54b;
+  --primary-color-dark: #9a3324;
+  --primary-color-light: #e2351b;
 }
 body::-webkit-scrollbar {
   width: 18px;
 }
 body {
   scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-color: var(--primary-color-dark) var(--scrollbarBG);
 }
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
+  background-color: white;
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }

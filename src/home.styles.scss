@@ -1,0 +1,115 @@
+.header {
+  background-color: var(--primary-color-light);
+  padding: 2rem 0;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  &-logo {
+    color: white;
+    font-size: 3rem;
+  }
+  &-menu {
+    display: flex;
+    column-gap: 9rem;
+
+    &-items {
+      color: black;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        color: rgb(43, 15, 15);
+      }
+    }
+  }
+}
+.emergencyAlertSection {
+  min-height: 20vh;
+  background-color: var(--primary-color-dark);
+
+  &-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem 0;
+    letter-spacing: 0.7rem;
+    color: white;
+    padding: 2rem;
+    &-icon {
+      font-size: 10rem;
+      color: red;
+      color: white;
+    }
+  }
+  &-description {
+    font-size: 2rem;
+    color: white;
+    padding: 2rem;
+  }
+  &-button {
+    text-align: center;
+    padding: 2rem;
+  }
+}
+.floodReview {
+  position: relative;
+  max-height: 80vh;
+  width: 100vw;
+  overflow: hidden;
+  &-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // align-items: center;
+    align-content: center;
+  }
+
+  &-background {
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+    z-index: -100;
+  }
+  &-description {
+    text-transform: uppercase;
+
+    position: relative;
+    // text-align: center;
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    letter-spacing: 1rem;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 2rem;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: white;
+      -webkit-backdrop-filter: blur(100px);
+      backdrop-filter: blur(100px);
+      background-clip: text;
+      -webkit-background-clip: text;
+      z-index: -50;
+    }
+    & span {
+      font-size: inherit;
+      width: 50%;
+    }
+    & span:nth-child(3) {
+      color: var(--primary-color-dark);
+    }
+  }
+}
