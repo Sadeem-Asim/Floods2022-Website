@@ -1,5 +1,6 @@
 import ConnectButton from "./components/ConnectButton/connectButton";
 import DonateButton from "./components/DonateButton/donateButton";
+
 import { FiAlertTriangle } from "react-icons/fi";
 import "./home.styles.scss";
 import { MDBContainer, MDBTypography } from "mdb-react-ui-kit";
